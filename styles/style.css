@@ -13,4 +13,37 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--mainFont, Inter), arial, sans-serif;
+  font-size: 18px;
+  font-weight: var(----textWeight, 410);
+}
+
+.header {
+  min-block-size: 668px;
+  block-size: 100vh;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+
+}
+
+.pageTitleContainer {
+  font-family: var(--accentFont, 'PressStart2P-Regular'), arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  grid-column: 2;
+  gap: 20px;
+  inline-size: clamp(375px, calc(260.563px + 30.516dvw), 700px);
+  block-size: clamp(327px, calc(233.205px + 14.041dvw), 368px);
+  text-transform: uppercase;
+}
+
+.pageTitle {
+  font-size: 49px;
+}
+
+.pageSubtitle {
+  font-size: 14px;
 }
