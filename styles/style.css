@@ -53,6 +53,7 @@
 .main {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 50px;
 }
 
@@ -103,6 +104,34 @@
   inline-size: 100%;
 }
 
+/* .cardImage:nth-child(2) {
+  filter: brightness(30%);
+}
+
+.cardImage:nth-child(3) {
+  filter: blur(10px);
+}
+
+/* .cardImage:nth-child(4) {
+  filter: ;
+}
+
+.cardImage:nth-child(5) {
+  filter: ;
+}
+
+.cardImage:nth-child(6) {
+  filter: ;
+}
+
+.cardImage:nth-child(7) {
+  filter: ;
+}
+
+.cardImage:nth-child(8) {
+  filter: ;
+} */  
+
 .cardText {
   padding-inline: 25px;
   padding-block-start: 25px;
@@ -128,14 +157,62 @@
 }
 
 .saveButton {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
   border: 2px solid #000;
-  padding-inline: 20px;
+  padding-inline: 18px;
   padding-block: 17px;
   background-color: #fff;
+  inline-size: clamp(19.125rem, 18.4866rem + 2.7238vw, 20.938rem);
 }
 
+.svgButton {
+  display: block;
+  inline-size: 40px;
+  block-size: 40px;
+} 
+
 .saveButtonText {
+  display: inline-block;
   font-family: var(--accentFont);
   font-size: 14px;
+  line-height: 90%;
+}
+
+.dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  font-family: var(--accentFont);
+  font-size: 14px;
+  inline-size: clamp(21.313rem, 21.0489rem + 1.1268vw, 22.063rem);
+  padding-block: 30px;
+  padding-inline: 25px;
+  text-transform: uppercase;
+}
+
+.dialogContent {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.svgDialog {
+  inline-size: 80px;
+  block-size: 80px;
+}
+
+.dialogTitle {
+  line-height: 150%;
+}
+
+.closeDialogButton {
+  padding-inline: 116.5px;
+  padding-block: 12.5px;
+  border: 2px solid #000;
   line-height: 90%;
 }
