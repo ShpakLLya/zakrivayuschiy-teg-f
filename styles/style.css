@@ -130,22 +130,56 @@
 
 .cardImage:nth-child(8) {
   filter: ;
-} */  
+} */
 
 .cardText {
   padding-inline: 25px;
   padding-block-start: 25px;
 }
 
-.card__icon-button {
+.buttonsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  gap: 12px;
   margin-block: 25px;
+}
+
+.card__icon-button {
+  padding: 6px;
+  margin: 0;
+  border: none;
+  background: inherit;
+  border: 2px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.card__icon-button:focus {
+  border: none;
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  outline: none;
+  border:2px solid #000;
+  transition: border 0.3s ease;
+  
+}
+
+.card__like-button {
+  padding: 0;
   border: none;
   background-color: inherit;
-  align-self: flex-end;
   margin-inline-end: 25px;
 }
 
+.card__like-button:focus {
+  outline: none;
+}
+
 .button__text {
+  position: relative;
   padding-inline: 37px;
   padding-block: 12.5px;
   align-self: center;
@@ -153,10 +187,40 @@
   font-size: 14px;
   line-height: 90%;
   text-transform: capitalize;
+  overflow: hidden;
   border: 2px solid #000;
 }
 
+
+
+.card__like-button .button__text {
+  transition: box-shadow 0.3s ease;
+}
+
+.card__like-button:focus-visible .button__text{
+  box-shadow: 2px 2px #000;
+  transition: box-shadow 0.3s ease;
+}
+
+.button__text::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  mix-blend-mode: difference;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card__like-button:hover .button__text::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
+}
+
 .saveButton {
+  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -168,13 +232,40 @@
   padding-block: 17px;
   background-color: #fff;
   inline-size: clamp(19.125rem, 18.4866rem + 2.7238vw, 20.938rem);
+  transition: box-shadow 0.3s ease;
+}
+
+.saveButton:focus {
+  outline: none;
+}
+
+.saveButton:focus-visible {
+  box-shadow: 2px 2px #000;
+  transition: box-shadow 0.3s ease;
+}
+
+.saveButton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  mix-blend-mode: difference;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.saveButton:hover.saveButton::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
 }
 
 .svgButton {
   display: block;
-  inline-size: 40px;
-  block-size: 40px;
-} 
+  inline-size: 28px;
+  block-size: 28px;
+}
 
 .saveButtonText {
   display: inline-block;
@@ -189,21 +280,27 @@
   gap: 30px;
   font-family: var(--accentFont);
   font-size: 14px;
-  inline-size: clamp(21.313rem, 21.0489rem + 1.1268vw, 22.063rem);
+  inline-size: clamp(341px, calc(336.61px + 1.171vw), 353px);;
   padding-block: 30px;
-  padding-inline: 25px;
+  padding-inline: 0;
   text-transform: uppercase;
+}
+
+.dialog::backdrop {
+  background-color: #000000CC;
 }
 
 .dialogContent {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  align-items: center;
+  margin-inline: clamp(30px, calc(43.659px - 0.976vw), 40px);
 }
 
 .svgDialog {
-  inline-size: 80px;
-  block-size: 80px;
+  inline-size: 28px;/*Фиксануть дискету!!!!!!*/
+  block-size: 28px;
 }
 
 .dialogTitle {
@@ -211,8 +308,39 @@
 }
 
 .closeDialogButton {
+  position: relative;
   padding-inline: 116.5px;
   padding-block: 12.5px;
+  margin-inline: clamp(30px, calc(43.659px - 0.976vw), 40px);
   border: 2px solid #000;
   line-height: 90%;
+  text-transform: uppercase;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.closeDialogButton:focus {
+  outline: none;
+}
+
+.closeDialogButton:focus-visible {
+  box-shadow: 2px 2px #000;
+  transition: box-shadow 0.3s ease;
+}
+
+.closeDialogButton::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: #fff;
+  mix-blend-mode: difference;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.closeDialogButton:hover.closeDialogButton::before {
+  transform-origin: left;
+  transform: scaleX(1);
+  transition: transform 0.5s ease-in-out;
 }
