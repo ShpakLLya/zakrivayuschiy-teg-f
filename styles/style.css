@@ -19,7 +19,7 @@
   gap: 100px;
   font-family: var(--mainFont, Inter), arial, sans-serif;
   font-size: 18px;
-  font-weight: var(----textWeight, 410);
+  font-variation-settings: 'wght' var(----textWeight,410);
   background-image: repeating-linear-gradient(90deg, #d3d3d3, #d3d3d300 2px),
                     repeating-linear-gradient(180deg,  #d3d3d3, #d3d3d300 2px),
                     linear-gradient(180deg,#e7e7e7, #1a1a1a);
@@ -154,7 +154,6 @@
 .card__icon-button {
   padding: 0;
   margin: 0;
-  border: none;
   background: inherit;
   border: 2px solid transparent;
   transition: border 0.3s ease;
