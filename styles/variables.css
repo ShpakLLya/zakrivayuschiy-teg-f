@@ -4,6 +4,7 @@
     --accentFont: 'PressStart2P-Regular';
     --textWeight: 410;
     --titleWeight: 715;
+    --textStyle: 0;
     --clampInlineSize: clamp(375px, calc(260.563px + 30.516dvw), 700px);
     --clampBlockSize: clamp(327px, calc(233.205px + 14.041dvw), 368px);
     --counterColor: #000;

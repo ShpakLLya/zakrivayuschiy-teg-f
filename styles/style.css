@@ -19,7 +19,7 @@
   gap: 100px;
   font-family: var(--mainFont, Inter), arial, sans-serif;
   font-size: 18px;
-  font-variation-settings: 'wght' var(----textWeight,410);
+  font-variation-settings: 'wght' var(----textWeight,410), 'slnt' var(--textStyle);
   background-image: repeating-linear-gradient(90deg, #d3d3d3, #d3d3d300 2px),
                     repeating-linear-gradient(180deg,  #d3d3d3, #d3d3d300 2px),
                     linear-gradient(180deg,#e7e7e7, #1a1a1a);
@@ -68,7 +68,7 @@
 
 .cardTitle {
   font-size: 18px;
-  font-weight: 715;
+  font-weight: var(--titleWeight, 715);
   line-height: 100%;
   padding-inline: 10px;
   padding-block: 6px;
@@ -140,6 +140,11 @@
 .cardText {
   padding-inline: 25px;
   padding-block-start: 25px;
+}
+
+.quote {
+--textStyle: -15;
+ font-variation-settings: 'wght' var(----textWeight,410), 'slnt' var(--textStyle);
 }
 
 .buttonsContainer {
