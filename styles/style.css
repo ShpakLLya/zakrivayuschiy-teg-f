@@ -159,31 +159,41 @@
   align-items: center;
   gap: 12px;
   margin-block: 25px;
+  margin-inline-end: 25px;
 }
 
-.card__icon-button {
+.button {
   padding: 0;
   margin: 0;
-  border: none;
   background: inherit;
-  outline: 2px solid transparent;
-  transition: border 0.3s ease;
+  border: 2px solid #000;
+  transition: outline 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card__icon-button:focus {
-  border: none;
+.button:focus {
+  outline-color: transparent;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px #000;
   outline: none;
 }
 
-.card__icon-button:focus-visible {
-  outline: 2px solid #000;
-  outline-offset: -3px;
-  transition: outline 0.3s ease;
-  
+.button:hover {
+  cursor: pointer;
 }
 
-.card__icon-button:hover {
-  cursor: pointer;
+.card__icon-button {
+  border: none;
+  outline: 2px solid transparent;
+  outline-offset: -3px;
+}
+
+.card__icon-button:focus-visible {
+  box-shadow: none;
+  outline: 2px solid #000;
+  transition: outline 0.3s ease;
+  
 }
 
 .like-icon.is-liked .heart {
@@ -246,19 +256,28 @@
   animation: fadeIn 0.3s 0.3s ease-in;
 }
 
-.card__like-button {
+.buttonDecoration {
   position: relative;
-  padding: 0;
-  border: 2px solid #000;
-  background-color: inherit;
-  margin-inline-end: 25px;
-  inline-size: 130px;
-  block-size: 38px;
-  transition: box-shadow 0.3s ease;
 }
 
-.card__like-button:focus {
-  outline: none;
+.buttonDecoration::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #fff;
+  mix-blend-mode: difference;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.buttonDecoration:hover::before {
+  transform: scaleX(1);
+}
+
+.card__like-button {
+  min-inline-size: 130px;
+  min-block-size: 38px;
 }
 
 .button__text {
@@ -269,72 +288,17 @@
   text-transform: capitalize;
 }
 
-.card__like-button:focus-visible {
-  box-shadow: 2px 2px #000;
-  transition: box-shadow 0.3s ease;
-}
-
-.card__like-button:hover {
-  cursor: pointer;
-}
-
-.card__like-button::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #fff;
-  mix-blend-mode: difference;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-}
-
-.card__like-button:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-  transition: transform 0.5s ease-in-out;
-}
-
 .saveButton {
-  position: relative;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 8px;
   justify-content: center;
   align-items: center;
-  border: 2px solid #000;
   padding-inline: 18px;
   padding-block: 17px;
   background-color: #fff;
   inline-size: clamp(19.125rem, 18.4866rem + 2.7238vw, 20.938rem);
-  transition: box-shadow 0.3s ease;
-}
-
-.saveButton:focus {
-  outline: none;
-}
-
-.saveButton:focus-visible {
-  box-shadow: 2px 2px #000;
-  transition: box-shadow 0.3s ease;
-}
-
-.saveButton::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: #fff;
-  mix-blend-mode: difference;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-}
-
-.saveButton:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-  transition: transform 0.5s ease-in-out;
 }
 
 .svgButton {
@@ -386,39 +350,9 @@
 }
 
 .closeDialogButton {
-  position: relative;
   padding-inline: 116.5px;
   padding-block: 12.5px;
   margin-inline: clamp(30px, calc(43.659px - 0.976vw), 40px);
-  border: 2px solid #000;
   line-height: 90%;
   text-transform: uppercase;
-  background-color: #fff;
-  transition: box-shadow 0.3s ease;
-}
-
-.closeDialogButton:focus {
-  outline: none;
-}
-
-.closeDialogButton:focus-visible {
-  box-shadow: 2px 2px #000;
-  transition: box-shadow 0.3s ease;
-}
-
-.closeDialogButton::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #fff;
-  mix-blend-mode: difference;
-  transform-origin: left;
-  transform: scaleX(0);
-  transition: transform 0.5s ease-in-out;
-}
-
-.closeDialogButton:hover::before {
-  transform-origin: left;
-  transform: scaleX(1);
-  transition: transform 0.5s ease-in-out;
 }
