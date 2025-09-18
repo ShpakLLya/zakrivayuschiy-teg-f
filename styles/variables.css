@@ -1,12 +1,11 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 :root {
     --mainFont: 'inter';
-    --accentFont: 'PressStart2P-Regular';
+    --accentFont: 'PressStart2P';
     --textWeight: 410;
     --titleWeight: 715;
     --textStyle: 0;
     --clampInlineSize: clamp(375px, calc(260.563px + 30.516dvw), 700px);
-    --clampBlockSize: clamp(327px, calc(233.205px + 14.041dvw), 368px);
     --counterColor: #000;
     --main-bodyColor: transparent;
     --coreColor: transparent;
