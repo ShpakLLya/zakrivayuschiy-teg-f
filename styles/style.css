@@ -16,7 +16,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 100px;
   font-family: var(--mainFont, Inter), arial, sans-serif;
   font-size: 18px;
   font-variation-settings: 'wght' var(--textWeight,410), 'slnt' var(--textStyle,0);
@@ -25,7 +24,6 @@
                     linear-gradient(180deg,#e7e7e7, #1a1a1a);
   background-attachment: fixed;
   background-size: cover;
-  margin-block: 100px;
 }
 
 .header {
@@ -40,6 +38,7 @@
   border: 2px solid #000;
   text-transform: uppercase;
   background-color: #fff;
+  margin-block: 98px;
 }
 
 .pageTitle {
@@ -55,6 +54,7 @@
   flex-direction: column;
   align-items: center;
   gap: 50px;
+  padding-block-end: 98px;
 }
 
 .card {
@@ -69,7 +69,7 @@
 .cardTitle {
   font-size: 18px;
   font-variation-settings: 'wght' var(--titleWeight), 'slnt' var(--textStyle);
-  line-height: 100%;
+  line-height: 110%;
   padding-inline: 10px;
   padding-block: 6px;
 }
@@ -84,10 +84,11 @@
   position: absolute;
   inset-inline-end: 25px;
   inset-block-start: 25px;
-  font-family: var(--accentFont);
+  font-family: var(--accentFont, 'PressStart2P');
   font-size: 14px;
   text-transform: uppercase;
-  color: #00000088;
+  color: #000000;
+  opacity: 0.5;
   mix-blend-mode: hard-light;
   z-index: 1;
   text-shadow: -1px 0px #fff,
@@ -157,7 +158,7 @@
   flex-direction: row;
   justify-content: end;
   align-items: center;
-  gap: 12px;
+  gap: 5px;
   margin-block: 25px;
   margin-inline-end: 25px;
 }
@@ -187,6 +188,7 @@
   border: none;
   outline: 2px solid transparent;
   outline-offset: -3px;
+  padding-block-start: 2px;
 }
 
 .card__icon-button:focus-visible {
@@ -295,16 +297,16 @@
   gap: 8px;
   justify-content: center;
   align-items: center;
-  padding-inline: 18px;
-  padding-block: 17px;
+  padding-inline: 16px;
+  padding-block: 15px;
   background-color: #fff;
   inline-size: clamp(19.125rem, 18.4866rem + 2.7238vw, 20.938rem);
 }
 
 .svgButton {
   display: block;
-  inline-size: 28px;
-  block-size: 28px;
+  inline-size: clamp(21px, calc(30.465px - 0.657vw), 28px);
+  block-size: clamp(21px, calc(30.465px - 0.657vw), 28px);
 }
 
 .saveButtonText {
@@ -314,20 +316,25 @@
   line-height: 90%;
 }
 
-.dialog[open] {
-  display: flex;
+.dialog {
+  display: none;
   flex-direction: column;
   gap: 30px;
   font-family: var(--accentFont);
   font-size: 14px;
   max-inline-size: clamp(341px, calc(336.61px + 1.171vw), 353px);
   padding-block: 30px;
-  padding-inline: 0;
+  padding-inline: clamp(30px, calc(43.659px - 0.976vw), 40px);
   text-transform: uppercase;
 }
 
+.dialog[open] {
+  display: flex;
+}
+
 .dialog::backdrop {
-  background-color: #000000CC;
+  background-color: #000000;
+  opacity: 75%;
 }
 
 .dialogContent {
@@ -335,13 +342,11 @@
   flex-direction: row;
   gap: 20px;
   align-items: center;
-  margin-inline: clamp(30px, calc(43.659px - 0.976vw), 40px);
 }
 
 .svgDialog {
   inline-size: 39px;
   block-size: 39px;
-  overflow: clip;
 }
 
 .dialogTitle {
@@ -351,8 +356,7 @@
 
 .closeDialogButton {
   padding-inline: 116.5px;
-  padding-block: 12.5px;
-  margin-inline: clamp(30px, calc(43.659px - 0.976vw), 40px);
+  padding-block: 11px;
   line-height: 90%;
   text-transform: uppercase;
 }
