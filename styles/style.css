@@ -68,7 +68,7 @@
 
 .cardTitle {
   font-size: 18px;
-  font-variation-settings: 'wght' var(--titleWeight), 'slnt' var(--textStyle);
+  font-variation-settings: 'wght' var(--titleWeight, 410), 'slnt' var(--textStyle, 0);
   line-height: 110%;
   padding-inline: 10px;
   padding-block: 6px;
@@ -97,11 +97,10 @@
                 0 -1px #fff;
 }
 
-@supports ((-webkit-text-stroke: 1px #fff) or (text-stroke: 1px #fff)) {
+@supports (-webkit-text-stroke: 1px #fff) {
   .cardLabel {
     text-shadow: none;
     -webkit-text-stroke: 1px #fff;
-    text-stroke: 1px #fff;
   }
 }
 
@@ -123,11 +122,11 @@
   filter: grayscale(1);
 }
 
-.hue-rotate {
+.hueRotate {
   filter: hue-rotate(0.2turn);
 }
 
-.hue-rotateSaturate {
+.hueRotateSaturate {
   filter: saturate(2) hue-rotate(0.3turn);
 }
 
@@ -150,7 +149,7 @@
 
 .quote {
 --textStyle: -15;
- font-variation-settings: 'wght' var(--textWeight), 'slnt' var(--textStyle);
+ font-variation-settings: 'wght' var(--textWeight, 410), 'slnt' var(--textStyle, -15);
 }
 
 .buttonsContainer {
@@ -212,22 +211,22 @@
   transition: fill 0.3s linear 0.06s;
 }
 
-.main-body {
+.mainBody {
   transition: fill 0.3s linear 0s;
 }
 
-.card__icon-button:hover .main-body {
-  --main-bodyColor: #000;
+.card__icon-button:hover .mainBody {
+  --mainBodyColor: #000;
   transition: fill 0.3s linear 0.05s;
 }
 
-.card__icon-button:active .main-body {
-  --main-bodyColor: red;
+.card__icon-button:active .mainBody {
+  --mainBodyColor: red;
   transition: fill 0.3s linear 0.05s;
 }
 
-.like-icon.is-liked .main-body {
-  --main-bodyColor: red;
+.like-icon.is-liked .mainBody {
+  --mainBodyColor: red;
   transition: fill 0.3s linear 0.05s;
 }
 
@@ -284,7 +283,7 @@
 
 .button__text {
   align-self: center;
-  font-family: var(--accentFont);
+  font-family: var(--accentFont, 'PressStart2P');
   font-size: 14px;
   line-height: 90%;
   text-transform: capitalize;
@@ -311,7 +310,7 @@
 
 .saveButtonText {
   display: inline-block;
-  font-family: var(--accentFont);
+  font-family: var(--accentFont, 'PressStart2P');
   font-size: 14px;
   line-height: 90%;
 }
@@ -320,11 +319,11 @@
   display: none;
   flex-direction: column;
   gap: 30px;
-  font-family: var(--accentFont);
+  font-family: var(--accentFont, 'PressStart2P');
   font-size: 14px;
   max-inline-size: clamp(341px, calc(336.61px + 1.171vw), 353px);
   padding-block: 30px;
-  padding-inline: clamp(30px, calc(43.659px - 0.976vw), 40px);
+  padding-inline: 30px;
   text-transform: uppercase;
 }
 
@@ -338,18 +337,20 @@
 }
 
 .dialogContent {
-  display: flex;
-  flex-direction: row;
+  display:grid;
   gap: 20px;
   align-items: center;
 }
 
 .svgDialog {
+  grid-column: 1;
   inline-size: 39px;
   block-size: 39px;
 }
 
 .dialogTitle {
+  grid-column: 2;
+  font-size: 14px;
   line-height: 150%;
   letter-spacing: 0;
 }

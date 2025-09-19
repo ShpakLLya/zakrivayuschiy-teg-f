@@ -7,7 +7,7 @@
     --textStyle: 0;
     --clampInlineSize: clamp(375px, calc(260.563px + 30.516dvw), 700px);
     --counterColor: #000;
-    --main-bodyColor: transparent;
+    --mainBodyColor: transparent;
     --coreColor: transparent;
     --sparksColor: red;
 }
