@@ -19,26 +19,42 @@
   font-family: var(--mainFont, Inter), arial, sans-serif;
   font-size: 18px;
   font-variation-settings: 'wght' var(--textWeight,410), 'slnt' var(--textStyle,0);
-  background-image: repeating-linear-gradient(90deg, #d3d3d3 0 2px, #d3d3d300 2px 4px),
-                    repeating-linear-gradient(180deg,  #d3d3d3 0 2px, #d3d3d300 2px 4px),
-                    linear-gradient(180deg,#e7e7e7, #1a1a1a);
+  background-image: repeating-linear-gradient(90deg, var(--gradientLineMainColor, #d3d3d3) 0 2px, var(--gradientLineAccentColor, #d3d3d300) 2px 4px),
+                    repeating-linear-gradient(180deg,  var(--gradientLineMainColor, #d3d3d3) 0 2px, var(--gradientLineAccentColor, #d3d3d300) 2px 4px),
+                    linear-gradient(180deg,var( --gradientMainColor, #e7e7e7), var(--gradientAccentColor, #1a1a1a));
   background-attachment: fixed;
   background-size: cover;
+  color: var(--mainTextColor, #000);
 }
 
 .header {
   font-family: var(--accentFont, 'PressStart2P'), arial, sans-serif;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
   inline-size: var(--clampInlineSize, 375px);
-  padding-block: 122px;
-  border: 2px solid #000;
+  padding-block-end: 122px;
+  border: 2px solid var(--borderColor, #000);
   text-transform: uppercase;
-  background-color: #fff;
+  background-color: var(--backgroundColor, #fff);
   margin-block: 98px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 10px;
+}
+
+.header .header__theme-menu-button {
+  margin-block: 50px;
+  padding: 10px;
+}
+
+.header .header__theme-menu-button_active {
+  outline: 2px solid var(--borderColor);
 }
 
 .pageTitle {
@@ -62,8 +78,8 @@
   flex-direction: column;
   inline-size: var(--clampInlineSize, 375px);
   grid-column: 2;
-  border: 2px solid #000;
-  background-color: #fff;
+  border: 2px solid var(--borderColor, #000);
+  background-color: var(--backgroundColor, #fff);
 }
 
 .cardTitle {
@@ -76,7 +92,7 @@
 
 .cardImageContainer {
   position: relative;
-  border-block: 2px solid #000;
+  border-block: 2px solid var(--borderColor, #000);
   font-size: 0;
 }
 
@@ -167,15 +183,16 @@
   padding: 0;
   margin: 0;
   background: inherit;
-  border: 2px solid #000;
+  border: 2px solid var(--borderColor, #000);
   transition: outline 0.3s ease, box-shadow 0.3s ease;
+  color: var(--mainTextColor, #000);
 }
 
 .button::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: #fff;
+  background: var(--backgroundColor, #fff);
   mix-blend-mode: difference;
   transform-origin: left;
   transform: scaleX(0);
@@ -191,7 +208,7 @@
 }
 
 .button:focus-visible {
-  box-shadow: 2px 2px #000;
+  box-shadow: 2px 2px var(--borderColor, #000);
   outline: none;
 }
 
@@ -206,9 +223,13 @@
   padding-block-start: 2px;
 }
 
+.card__icon-button.button::before {
+  display: none;
+}
+
 .card__icon-button:focus-visible {
   box-shadow: none;
-  outline: 2px solid #000;
+  outline: 2px solid var(--borderColor, #000);
   transition: outline 0.3s ease;
   
 }
@@ -295,8 +316,12 @@
   align-items: center;
   padding-inline: 16px;
   padding-block: 15px;
-  background-color: #fff;
+  background-color: var(--backgroundColor, #fff);
   inline-size: clamp(19.125rem, 18.4866rem + 2.7238vw, 20.938rem);
+}
+
+.saveButton .button__text {
+  text-transform: none;
 }
 
 .svgButton {
@@ -315,6 +340,8 @@
   padding-block: 30px;
   padding-inline: 30px;
   text-transform: uppercase;
+  background-color: var(--backgroundColor);
+  color: var(--mainTextColor);
 }
 
 .dialog[open] {

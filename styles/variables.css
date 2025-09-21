@@ -5,6 +5,13 @@
     --textWeight: 410;
     --titleWeight: 715;
     --textStyle: 0;
+    --gradientLineMainColor: #d3d3d3;
+    --gradientLineAccentColor: #d3d3d300;
+    --gradientMainColor: #e7e7e7;
+    --gradientAccentColor: #1a1a1a;
+    --mainTextColor: #000;
+    --borderColor: #000;
+    --backgroundColor: #fff;
     --clampInlineSize: clamp(375px, calc(260.563px + 30.516dvw), 700px);
     --counterColor: #000;
     --mainBodyColor: transparent;

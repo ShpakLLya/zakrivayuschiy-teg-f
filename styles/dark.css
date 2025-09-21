@@ -1,0 +1,85 @@
+:root.theme-dark {
+    --gradientLineMainColor: #000028;
+    --gradientLineAccentColor:#00002800;
+    --gradientMainColor: #1a1a1a;
+    --gradientAccentColor: #46091e;
+    --mainTextColor: #FF0070;
+    --borderColor: #FF0070;
+    --backgroundColor: #242022;
+    --counterColor: #FF0070;
+    --mainBodyColor: transparent;
+    --coreColor: transparent;
+    --sparksColor: red;
+}
+
+.theme-dark .like-icon.is-liked .contour {
+  --counterColor: red;
+}
+
+.theme-dark .card__icon-button:hover .mainBody {
+  --mainBodyColor: #FF0070;
+}
+
+.theme-dark .card__icon-button:active .mainBody {
+  --mainBodyColor: red;
+}
+
+.theme-dark .like-icon.is-liked .mainBody {
+  --mainBodyColor: red;
+}
+
+.theme-dark .card__icon-button:hover .core {
+  --coreColor: #FF0070;
+}
+
+.theme-dark .card__icon-button:active .core {
+  --coreColor: red;
+}
+
+.theme-dark .like-icon.is-liked .core {
+  --coreColor: red;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+    --gradientLineMainColor: #000028;
+    --gradientLineAccentColor:#00002800;
+    --gradientMainColor: #1a1a1a;
+    --gradientAccentColor: #46091e;
+    --mainTextColor: #FF0070;
+    --borderColor: #FF0070;
+    --backgroundColor: #242022;
+    --counterColor: #FF0070;
+    --mainBodyColor: transparent;
+    --coreColor: transparent;
+    --sparksColor: red;
+    }
+
+    .like-icon.is-liked .contour {
+  --counterColor: red;
+}
+
+.card__icon-button:hover .mainBody {
+  --mainBodyColor: #FF0070;
+}
+
+.card__icon-button:active .mainBody {
+  --mainBodyColor: red;
+}
+
+.like-icon.is-liked .mainBody {
+  --mainBodyColor: red;
+}
+
+.card__icon-button:hover .core {
+  --coreColor: #FF0070;
+}
+
+.card__icon-button:active .core {
+  --coreColor: red;
+}
+
+.like-icon.is-liked .core {
+  --coreColor: red;
+}
+}

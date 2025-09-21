@@ -1,0 +1,41 @@
+:root.theme-light {
+    --gradientLineMainColor: #d3d3d3;
+    --gradientLineAccentColor: #d3d3d300;
+    --gradientMainColor: #e7e7e7;
+    --gradientAccentColor: #1a1a1a;
+    --mainTextColor: #000;
+    --borderColor: #000;
+    --backgroundColor: #fff;
+    --counterColor: #000;
+    --mainBodyColor: transparent;
+    --coreColor: transparent;
+    --sparksColor: red;
+}
+
+.theme-light .like-icon.is-liked .contour {
+  --counterColor: red;
+}
+
+.theme-light .card__icon-button:hover .mainBody {
+  --mainBodyColor: #000;
+}
+
+.theme-light .card__icon-button:active .mainBody {
+  --mainBodyColor: red;
+}
+
+.theme-light .like-icon.is-liked .mainBody {
+  --mainBodyColor: red;
+}
+
+.theme-light .card__icon-button:hover .core {
+  --coreColor: #000;
+}
+
+.theme-light .card__icon-button:active .core {
+  --coreColor: red;
+}
+
+.theme-light .like-icon.is-liked .core {
+  --coreColor: red;
+}

@@ -4,18 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="discription" content="первый проект, путь начинающего разработчика, frontend">
+    <meta name="color-scheme" content="light">
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="stylesheet" href="./styles/dark.css" />
     <link rel="icon" href="./images/icon.ico" sizes="any">
     <link rel="icon" href="./svg/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="./images/icon.png">
+    <script src="./scripts/themeChanger.js"></script>
   </head>
   <body class="page">
     <header class="header">
+     <nav class="header__theme-menu">
+        <ul class="header__theme-menu-list">
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button button header__theme-menu-button_type_light"
+            >
+              Светлая
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button button header__theme-menu-button_active header__theme-menu-button_type_auto"
+              disabled
+            >
+              Авто
+            </button>
+          </li>
+          <li class="header__theme-menu-item">
+            <button
+              class="header__theme-menu-button button header__theme-menu-button_type_dark"
+            >
+              Темная
+            </button>
+          </li>
+        </ul>
+      </nav>
       <h1 class="pageTitle">
         &lt;/html&gt;
       </h1>
