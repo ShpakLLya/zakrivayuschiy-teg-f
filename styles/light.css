@@ -12,8 +12,13 @@
     --sparksColor: red;
 }
 
+.theme-light .page::-webkit-scrollbar-thumb {
+  --mainTextColor: #696969;
+}
+
 .theme-light .cardLabel {
   --borderColor:#fff;
+  --mainTextColor: #000;
 }
 
 .theme-light .button::before {

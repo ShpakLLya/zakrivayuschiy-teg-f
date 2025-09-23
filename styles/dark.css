@@ -12,6 +12,10 @@
     --sparksColor: red;
 }
 
+.theme-dark .page::-webkit-scrollbar-thumb {
+    --mainTextColor: #FF0070;
+}
+
 .theme-dark .cardLabel {
   --mainTextColor: #fff;
   --borderColor:#FF0070;
@@ -63,6 +67,10 @@
     --coreColor: transparent;
     --sparksColor: red;
     }
+
+    .page::-webkit-scrollbar-thumb {
+    --mainTextColor: #FF0070;
+}
 
     .cardLabel {
   --mainTextColor: #fff;
