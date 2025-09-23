@@ -12,6 +12,15 @@
     --sparksColor: red;
 }
 
+.theme-dark .cardLabel {
+  --mainTextColor: #fff;
+  --borderColor:#FF0070;
+}
+
+.theme-dark .button::before {
+  --backgroundColor: #FF0070;
+}
+
 .theme-dark .like-icon.is-liked .contour {
   --counterColor: red;
 }
@@ -55,6 +64,14 @@
     --sparksColor: red;
     }
 
+    .cardLabel {
+  --mainTextColor: #fff;
+  --borderColor:#FF0070;
+}
+
+    .button::before {
+  --backgroundColor: #FF0070;
+}
     .like-icon.is-liked .contour {
   --counterColor: red;
 }

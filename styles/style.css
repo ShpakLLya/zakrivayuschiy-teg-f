@@ -19,8 +19,8 @@
   font-family: var(--mainFont, Inter), arial, sans-serif;
   font-size: 18px;
   font-variation-settings: 'wght' var(--textWeight,410), 'slnt' var(--textStyle,0);
-  background-image: repeating-linear-gradient(90deg, var(--gradientLineMainColor, #d3d3d3) 0 2px, var(--gradientLineAccentColor, #d3d3d300) 2px 4px),
-                    repeating-linear-gradient(180deg,  var(--gradientLineMainColor, #d3d3d3) 0 2px, var(--gradientLineAccentColor, #d3d3d300) 2px 4px),
+  background-image: repeating-linear-gradient(90deg, var(--gradientLineMainColor, #d3d3d3) 0 1px, var(--gradientLineAccentColor, #d3d3d300) 2px 4px),
+                    repeating-linear-gradient(180deg,  var(--gradientLineMainColor, #d3d3d3) 0 1px, var(--gradientLineAccentColor, #d3d3d300) 2px 4px),
                     linear-gradient(180deg,var( --gradientMainColor, #e7e7e7), var(--gradientAccentColor, #1a1a1a));
   background-attachment: fixed;
   background-size: cover;
@@ -99,26 +99,28 @@
 }
 
 .cardLabel {
+  --mainTextColor: #000;
+  --borderColor:#fff;
   position: absolute;
   inset-inline-end: 25px;
   inset-block-start: 25px;
   font-family: var(--accentFont, 'PressStart2P');
   font-size: 14px;
   text-transform: uppercase;
-  color: #000000;
+  color: var(--mainTextColor);
   opacity: 0.5;
   mix-blend-mode: hard-light;
   z-index: 1;
-  text-shadow: -1px 0px #fff,
-                0 1px #fff,
-                1px 0 #fff,
-                0 -1px #fff;
+  text-shadow: -1px 0px var(--borderColor),
+                0 1px var(--borderColor),
+                1px 0 var(--borderColor),
+                0 -1px var(--borderColor);
 }
 
 @supports (-webkit-text-stroke: 1px #fff) {
   .cardLabel {
     text-shadow: none;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px var(--borderColor);
   }
 }
 

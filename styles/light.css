@@ -12,6 +12,14 @@
     --sparksColor: red;
 }
 
+.theme-light .cardLabel {
+  --borderColor:#fff;
+}
+
+.theme-light .button::before {
+  --backgroundColor: #fff;
+} 
+
 .theme-light .like-icon.is-liked .contour {
   --counterColor: red;
 }
